@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdbc9b8e-b5f7-411e-9c37-31582377e47f" name="Changes" comment="">
+    <list default="true" id="fdbc9b8e-b5f7-411e-9c37-31582377e47f" name="Changes" comment="sdas">
+      <change afterPath="$PROJECT_DIR$/audio/Dr.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Mia-hello.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Sam.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Doctor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Kind.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Mia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Owl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/starlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
     </list>
@@ -17,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,6 +67,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\baset\Documents\GitHub\EnglishWebsite\audio" />
+      <recent name="C:\Users\baset\Documents\GitHub\EnglishWebsite" />
+      <recent name="C:\Users\baset\Documents\GitHub\EnglishWebsite\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -74,11 +91,24 @@
       <option name="presentableId" value="Default" />
       <updated>1734524698391</updated>
       <workItem from="1734524699304" duration="2000" />
-      <workItem from="1734524804124" duration="908000" />
+      <workItem from="1734524804124" duration="3211000" />
     </task>
+    <task id="LOCAL-00001" summary="sdas">
+      <option name="closed" value="true" />
+      <created>1734525883546</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734525883546</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sdas" />
+    <option name="LAST_COMMIT_MESSAGE" value="sdas" />
   </component>
 </project>

@@ -7,6 +7,9 @@
     <title>Home Page</title>
 </head>
 <body>
+    <!-- Background Canvas for Starlight Effect -->
+    <canvas id="starlight-bg"></canvas>
+
     <!-- Navbar -->
     <div id="navbar"></div>
 
@@ -25,25 +28,25 @@
     <main>
         <!-- Cards Section -->
         <section class="card-container">
-            <div class="card">
-                <img src="images/character1.jpg" alt="Character 1">
-                <h3>Star Seeker</h3>
-                <p>A visionary who guides travelers through the starlit skies.</p>
+            <div class="card" data-audio="audio/Mia-hello.mp3">
+                <img src="images/Mia.png" alt="Mia">
+                <h3>Mia</h3>
+                <p>Mia is a curious girl who loves to learn new things. Even though she’s in the hospital, she goes on amazing adventures to learn about space and more. She loves helping her friends discover the fun in learning!</p>
             </div>
-            <div class="card">
-                <img src="images/character2.jpg" alt="Character 2">
-                <h3>Moon Dancer</h3>
-                <p>A graceful being who draws power from the glow of the moon.</p>
+            <div class="card" data-audio="audio/Sam.mp3">
+                <img src="images/Kind.png" alt="Sam">
+                <h3>Sam</h3>
+                <p>Sam loves to draw and create cool things. At first, he didn’t think he liked school, but with some help from his friends, he learned that art and learning can be super fun when you do them together!</p>
             </div>
-            <div class="card">
-                <img src="images/character3.jpg" alt="Character 3">
-                <h3>Cosmic Warrior</h3>
-                <p>Protector of galaxies, adorned with celestial armor.</p>
+            <div class="card" data-audio="audio/Dr.mp3">
+                <img src="images/Doctor.png" alt="Dr. Theo">
+                <h3>Dr. Theo</h3>
+                <p>Dr. Theo is a kind doctor who created the Hospital Classroom to help kids keep learning while they're in the hospital. He’s always there to help with a big smile and lots of encouragement!</p>
             </div>
-            <div class="card">
-                <img src="images/character4.jpg" alt="Character 4">
-                <h3>Galaxy Whisperer</h3>
-                <p>A mystic who deciphers the secrets of the stars.</p>
+            <div class="card" data-audio="audio/Lumo.mp3">
+                <img src="images/Owl.png" alt="Lumi">
+                <h3>Lumi</h3>
+                <p>Lumi is a magical owl who guides Mia and her friends on their learning adventures. With Lumi, kids can fly through space, learn about stars, and have fun exploring new things with every flap of his wings!</p>
             </div>
         </section>
     </main>
@@ -61,6 +64,54 @@
                 console.error('Error loading footer:', error);
             });
     </script>
+
+    <!-- Navbar JavaScript for hiding "Home" link -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+
+                // Check if we're on the homepage (index.html)
+                if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+                    const homeLink = document.getElementById('home-link');
+                    if (homeLink) {
+                        homeLink.style.display = 'none'; // Remove the Home link if we're on the homepage
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error loading navbar:', error);
+            });
+    </script>
+
+    <!-- Starlight JavaScript -->
+    <script src="js/starlight.js"></script>
+
+    <!-- Audio Play on Hover -->
+    <script>
+        // Select all the cards
+        const cards = document.querySelectorAll('.card');
+
+        // Loop through each card and add an event listener for the hover effect
+        cards.forEach(card => {
+            const audioSrc = card.getAttribute('data-audio'); // Get the audio source for each card
+            const audio = new Audio(audioSrc); // Create a new Audio object
+
+            // Play audio when mouse enters the card
+            card.addEventListener('mouseenter', () => {
+                audio.play();
+            });
+
+            // Pause audio when mouse leaves the card
+            card.addEventListener('mouseleave', () => {
+                audio.pause();
+                audio.currentTime = 0; // Reset the audio to the beginning
+            });
+        });
+    </script>
+
 </body>
 </html>
+
 
