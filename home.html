@@ -8,6 +8,7 @@
     <title>Home Page</title>
 </head>
 <body>
+    <!-- Navbar -->
     <div id="navbar"></div>
 
     <script>
@@ -18,6 +19,26 @@
             })
             .catch(error => {
                 console.error('Error loading navbar:', error);
+            });
+    </script>
+
+    <!-- Content -->
+    <main>
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the main content area.</p>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
             });
     </script>
 </body>

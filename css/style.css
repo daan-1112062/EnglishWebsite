@@ -1,3 +1,44 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: linear-gradient(90deg, #007BFF, #FFFFFF);
+  color: #FFFFFF; /* Set all text to white */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-block {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer-block h3 {
+  color: #FFFFFF; /* Make headers white */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-block ul li {
+  margin: 5px 0;
+}
+
+.footer-block ul li a {
+  color: #FFFFFF; /* Make links white */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-block ul li a:hover {
+  color: #D9D9D9; /* Slightly lighter color on hover */
+}
+
+.footer
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
