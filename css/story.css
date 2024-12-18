@@ -1,0 +1,155 @@
+/* General button styling for consistency */
+.audio-player-btn {
+    font-size: 24px;
+    background-color: #4CAF50; /* Green color for play button */
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect for the play button */
+.audio-player-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Slightly enlarge the button when hovered */
+}
+
+/* Active state for the play button */
+.audio-player-btn:active {
+    background-color: #388e3c;
+    transform: scale(1); /* Return to original size on click */
+}
+
+/* Custom styling for the replay button */
+.replay-btn {
+    background-color: #FF6347; /* Tomato color for replay button */
+    font-size: 24px; /* Ensure the replay button matches the play button size */
+    padding: 15px 20px;
+}
+
+.replay-btn:hover {
+    background-color: #FF4500;
+}
+
+.replay-btn:active {
+    background-color: #D24D20;
+}
+
+/* Story container styling */
+.story-container {
+    max-width: 800px;
+    width: 100%; /* Ensure it takes up the full width available */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Ensures text is left-aligned */
+    margin: 50px auto; /* Centers the container horizontally */
+}
+
+/* Styling for the story header */
+.story-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Ensures there’s space below the header */
+}
+
+/* Styling for the story title */
+.story-container h1 {
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+/* Styling for the story paragraphs */
+.story-container p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Styling for the play button container */
+.btn-play {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Play icon size in the button */
+.btn-play i {
+    font-size: 20px;
+}
+
+/* Hover effect for the play button */
+.btn-play:hover {
+    background-color: #27ae60;
+}
+
+/* Styling for the audio player container */
+.audio-player-container {
+    margin-top: 20px;
+}
+
+/* Sidebar positioning and style */
+.sidebar {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* Styling for the buttons in the sidebar */
+.sidebar .audio-player-btn {
+    width: 100px; /* Ensures all buttons are the same size */
+    padding: 15px 20px;
+    font-size: 24px;
+}
+
+/* Hover effect for the sidebar buttons */
+.sidebar .audio-player-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Replay button style for the sidebar */
+.sidebar .replay-btn {
+    background-color: #FF6347;
+}
+
+.sidebar .replay-btn:hover {
+    background-color: #FF4500;
+}
+
+.sidebar .replay-btn:active {
+    background-color: #D24D20;
+}
+
+
+/* Optional: Add a little more margin to the right side for mobile */
+@media (max-width: 768px) {
+    .story-container {
+        margin-right: 20px; /* Remove extra margin for smaller screens */
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hospital Classroom: A Magical Learning Journey - Storytime Haven</title>
+    <link rel="stylesheet" href="css/story.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome Icons -->
+
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading navbar:', error);
+            });
+    </script>
+
+    <div class="sidebar">
+        <!-- Play/Pause button with an icon -->
+        <button id="playPauseButton" class="audio-player-btn">
+            <i class="fas fa-play"></i> <!-- Play icon initially -->
+        </button>
+        <!-- Replay button with an icon -->
+        <button id="replayButton" class="audio-player-btn replay-btn">
+            <i class="fas fa-redo"></i> <!-- Replay icon -->
+        </button>
+    </div>
+    <!-- Story Content -->
+    <div class="story-container">
+        <div class="story-header">
+            <h1>The Hospital Classroom: A Magical Learning Journey</h1>
+        </div>
+
+        <p><strong>Mia stared out the window of Starlight Children’s Hospital, her notebook sitting untouched on her lap. She missed her school, her friends, and the sound of pencils scratching on paper during math class. Being in the hospital was hard enough, but the thought of falling behind in her studies made her chest tighten with worry.</strong></p>
+
+        <p>One morning, Dr. Theo, her cheerful pediatrician, walked into her room with a tablet in hand. “Mia,” he said with a smile, “I think you’re going to love this. Welcome to the Hospital Classroom!”</p>
+
+        <p>Mia tilted her head. “A classroom? Here?”</p>
+
+        <p>Dr. Theo nodded. “This is a special program we’ve created for kids like you, so you can keep learning and exploring, even while you’re here.” He handed her the tablet. “And this,” he added, “is Lumi. You’ll see.”</p>
+
+        <p>As soon as Mia touched the screen, a soft glow filled the room. Out of the tablet soared Lumi the Owl, a magical, holographic creature with shimmering feathers and sparkling eyes.</p>
+
+        <p>“Greetings, young scholar!” Lumi hooted, his wings flapping gently. “I’m your guide to a world of wonder and learning. Ready for an adventure?”</p>
+
+        <p>Mia’s eyes widened. “Wait, you’re real?!”</p>
+
+        <p>“Well, kind of,” Lumi chuckled. “Let’s just say I’m as real as your imagination allows.”</p>
+
+        <h2>Adventures Begin</h2>
+
+        <p>That day, Mia joined Lumi on her first magical learning journey. Together, they soared through outer space, dodging asteroids while learning about gravity and the planets. In the corner of the hospital room, Mia’s roommate Sam watched quietly, his sketchbook clutched to his chest.</p>
+
+        <p>“Sam, you should try this!” Mia said, her face glowing with excitement.</p>
+
+        <p>Sam hesitated. “I’m not good at school stuff,” he mumbled.</p>
+
+        <p>Lumi landed on the foot of Sam’s bed. “Nonsense! Everyone learns differently. How about we mix a little art with math?”</p>
+
+        <p>Curious, Sam put down his sketchbook and picked up his tablet. Lumi guided them to design a castle, calculating the materials needed to build it. As Sam drew the towers and arches, Mia worked on the numbers. By the end of the session, they had built a virtual masterpiece together.</p>
+
+        <p>“This is actually... fun,” Sam admitted, a small smile creeping onto his face.</p>
+
+        <h2>A Shared Journey</h2>
+
+        <p>Over the next few weeks, the Hospital Classroom became the highlight of Mia and Sam’s days. Lumi whisked them away to the past, where they met Florence Nightingale and learned about courage and kindness. They explored science, art, history, and even practiced storytelling by creating their own animated tales.</p>
+
+        <p>The best part? They weren’t alone. Other children in Starlight Children’s Hospital joined the sessions, laughing and learning together. Mia discovered that even though she was in a hospital bed, her mind could travel anywhere.</p>
+
+        <h2>The Learning Showcase</h2>
+
+        <p>One day, Lumi announced a big event: “It’s time for the Learning Showcase! Every child will present something they’ve created or learned.”</p>
+
+        <p>Mia was thrilled, but Sam looked nervous. “What if I mess up?” he whispered.</p>
+
+        <p>“You won’t,” Mia said gently. “I’ll help you.”</p>
+
+        <p>With Mia’s encouragement, Sam worked on combining his art and math skills into a colorful poster about their castle adventure. On the day of the showcase, Sam stood in front of the other kids and proudly shared his work. The room erupted in cheers.</p>
+
+        <p>“I can’t believe I did that,” Sam said afterward, his cheeks flushed with pride.</p>
+
+        <p>“I always knew you could,” Mia replied with a grin.</p>
+
+        <h2>The Beginning of Something New</h2>
+
+        <p>As the program expanded, more kids in the hospital joined the Hospital Classroom. Dr. Theo couldn’t help but smile when he saw Mia and Sam teaching new children how to navigate Lumi’s magical world.</p>
+
+        <p>Before bed that night, Lumi perched beside Mia. “You’ve learned a lot, haven’t you?”</p>
+
+        <p>“More than I ever expected,” Mia said. “But the best part was helping Sam. Learning feels even better when you share it.”</p>
+
+        <p>“Wise words,” Lumi said, his feathers shimmering. “And remember, the adventure is never over. Learning is a journey without limits.”</p>
+
+        <p>As Lumi faded into the tablet, Mia hugged her pillow, knowing that even in the hospital, she could dream, explore, and grow.</p>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+    <script src="Script/script.js"></script>
+</body>
+</html>
