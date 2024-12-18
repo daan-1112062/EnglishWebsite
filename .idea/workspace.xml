@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdbc9b8e-b5f7-411e-9c37-31582377e47f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
     </list>
@@ -47,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.home.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
     "node.js.detected.package.eslint": "true",
@@ -74,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1734524698391</updated>
       <workItem from="1734524699304" duration="2000" />
-      <workItem from="1734524804124" duration="608000" />
+      <workItem from="1734524804124" duration="908000" />
     </task>
     <servers />
   </component>
