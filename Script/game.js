@@ -45,7 +45,7 @@ cards.forEach(card => {
                     flippedCards.forEach(card => card.style.pointerEvents = 'none');
                     matchedPairs++;
                     if (matchedPairs === cards.length / 2) {
-                        document.getElementById('message').textContent = 'You Win! All matches found!';
+                        triggerWin(); // Trigger win logic when all matches are found
                     }
                 } else {
                     // Cards do not match, flip them back
@@ -55,4 +55,61 @@ cards.forEach(card => {
             }, 1000);
         }
     });
+});
+
+// Trigger Win logic
+function triggerWin() {
+    // Display You Win message
+    const winMessage = document.getElementById('win-message');
+    winMessage.style.display = 'block'; // Show the message
+    console.log('Confetti triggered!');
+    confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { x: 0.5, y: 0.5 },
+    colors: ['#ff0', '#0f0', '#00f', '#f00']
+    });
+
+
+    // Play victory audio
+    const winAudio = new Audio('audio/victory-sound.mp3');
+    winAudio.play();
+
+    // Hide the message after 4 seconds
+    setTimeout(() => {
+        winMessage.style.display = 'none';
+    }, 4000); // Hide after 4 seconds
+}
+
+
+// Confetti Effect
+function confetti() {
+    canvasConfetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { x: 0.5, y: 0.5 }
+    });
+}
+// Restart Game Logic
+document.getElementById('restart-button').addEventListener('click', function () {
+    // Hide the "You Win!" message when restarting
+    const winMessage = document.getElementById('win-message');
+    winMessage.style.display = 'none'; // Hide win message on restart
+
+    // Reset all cards
+    cards.forEach(card => {
+        card.classList.remove('flipped');
+        card.style.pointerEvents = 'auto';
+    });
+
+    // Reset game variables
+    matchedPairs = 0;
+    flippedCards = [];
+    shuffleCards();
+
+    // Change start button text back to "Start Game"
+    document.getElementById('start-button').textContent = 'Start Game';
+
+    // Reset the message
+    document.getElementById('message').textContent = '';
 });

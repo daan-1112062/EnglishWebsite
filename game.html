@@ -6,6 +6,7 @@
     <title>Memory Match Game - Storyhaven</title>
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <!-- Background Canvas for Starlight Effect -->
@@ -29,7 +30,9 @@
         <h1>Welcome to the Memory Match Game!</h1>
         <p>Can you match all the pairs of cards? Click on a card to flip it, then try to find its match!</p>
     </div>
-
+    <div id="win-message" class="win-message">
+    <h1>You Win!</h1>
+    </div>
     <!-- Game Board -->
     <div class="game-container">
         <div class="game-options">
@@ -93,6 +96,7 @@
         </div>
         <div class="game-action">
             <button id="start-button" class="btn">Start Game</button>
+            <button id="restart-button" class="btn">Restart Game</button>
             <p id="message"></p>
         </div>
     </div>
