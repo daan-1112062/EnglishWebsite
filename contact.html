@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Storyhaven</title>
+    <link rel="stylesheet" href="css/contact.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Canvas for Starlight Effect -->
+    <canvas id="starlight-bg"></canvas>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading navbar:', error);
+            });
+    </script>
+
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="form-card">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="handleSubmit(event)">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <p id="form-success-message" class="success-message" style="display:none;">Your message has been sent successfully!</p>
+        </div>
+
+        <!-- Company Details Card -->
+        <div class="details-card">
+            <div class="details-header">
+                <h3>Our Contact Details</h3>
+                <p>Get in touch with us directly or via email for more information or support.</p>
+            </div>
+            <div class="details-body">
+                <p><strong>Phone:</strong> +1 (234) 567-890</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@storyhaven.com">contact@storyhaven.com</a></p>
+                <p><strong>Address:</strong> 123 Learning St, Story City, SC 98765</p>
+                <p><strong>Hours:</strong> Mon-Fri, 9 AM - 6 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+
+        // Function to handle form submission and display a success message
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the form from reloading the page
+
+            // Display success message
+            const successMessage = document.getElementById('form-success-message');
+            successMessage.style.display = 'block';
+
+            // Clear the form fields
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+
+    <script src="Script/starlight.js"></script>
+</body>
+</html>
