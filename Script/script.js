@@ -1,3 +1,4 @@
+// Existing Audio Player Functionality
 const playPauseButton = document.getElementById('playPauseButton');
 const replayButton = document.getElementById('replayButton');
 const audio = new Audio('media/mia.mp3'); // Replace with your audio file
@@ -24,3 +25,4 @@ replayButton.addEventListener('click', () => {
 audio.addEventListener('ended', () => {
     playPauseButton.innerHTML = '<i class="fas fa-play"></i>'; // Reset button to "Play" icon when audio ends
 });
+

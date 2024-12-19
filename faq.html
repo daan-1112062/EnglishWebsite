@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>FAQ - Storytime Haven</title>
+</head>
+<body>
+    <!-- Background Canvas for Starlight Effect -->
+    <canvas id="starlight-bg"></canvas>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading navbar:', error);
+            });
+    </script>
+
+    <!-- FAQ Content -->
+    <main class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <section class="faq-section">
+            <!-- Question 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is Storytime Haven?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Storytime Haven is a platform dedicated to bringing joy and education to children in hospitals through engaging and magical stories, games, and activities.
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Who is Lumi?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Lumi is our magical guide who helps children explore the world of learning in fun and creative ways. He’s a holographic owl with a big heart and a love for adventure!
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How can I participate?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    If you’re a parent, guardian, or hospital staff member, reach out to us through our contact page to learn how to bring the Hospital Classroom experience to your location.
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is Storytime Haven free to use?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, Storytime Haven is free to use for children in hospitals. We are committed to making our content accessible to everyone.
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What kind of activities do you offer?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    We offer interactive stories, educational games, fun quizzes, and creative activities designed to entertain and inspire children.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+
+    <!-- FAQ Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const questions = document.querySelectorAll('.faq-question');
+
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('.toggle-icon');
+                    const isVisible = answer.style.display === 'block';
+
+                    // Toggle visibility of answer
+                    answer.style.display = isVisible ? 'none' : 'block';
+
+                    // Toggle icon between "+" and "-"
+                    icon.textContent = isVisible ? '+' : '-';
+                });
+            });
+        });
+    </script>
+    <script src="Script/starlight.js"></script>
+
+</body>
+</html>
