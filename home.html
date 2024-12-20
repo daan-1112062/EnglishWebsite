@@ -13,6 +13,16 @@
 
     <!-- Navbar -->
     <div id="navbar"></div>
+    <!-- music.html -->
+<audio id="background-music" loop>
+    <source src="audio/background-music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Pause/Play Button -->
+<button id="pause-button" class="pause-button">
+    <i class="fas fa-pause"></i> Pause Music
+</button>
 
     <script>
         fetch('navbar.html')
@@ -26,7 +36,8 @@
     </script>
     <!-- Welcome Message -->
     <div class="welcome-message">
-        <h1>Welcome to Storyhaven</h1>
+        <h1>Welcome to Storytime Haven</h1>
+        <p>Swipe over us for a surprise!</p>
     </div>
     <!-- Content -->
     <main>
@@ -114,6 +125,40 @@
             });
         });
     </script>
+    <script>
+    // Get the audio element and the pause button
+    const music = document.getElementById("background-music");
+    const pauseButton = document.getElementById("pause-button");
+
+    // Play the audio on page load
+    window.onload = () => {
+        try {
+            music.play();
+        } catch (error) {
+            console.error("Error playing the music:", error);
+        }
+    };
+
+    // Pause/Play functionality
+    pauseButton.addEventListener("click", function() {
+        if (music.paused) {
+            try {
+                music.play();
+                pauseButton.innerHTML = '<i class="fas fa-pause"></i> Pause Music';
+            } catch (error) {
+                console.error("Error playing the music:", error);
+            }
+        } else {
+            try {
+                music.pause();
+                pauseButton.innerHTML = '<i class="fas fa-play"></i> Play Music';
+            } catch (error) {
+                console.error("Error pausing the music:", error);
+            }
+        }
+    });
+</script>
+
 
 </body>
 </html>

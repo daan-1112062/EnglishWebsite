@@ -401,3 +401,39 @@ body::after {
     padding-left: 10px; /* Indent for a cleaner look */
     border-left: 2px solid rgba(255, 255, 255, 0.2); /* Visual separation */
 }
+.pause-button {
+    background: none;
+    border: none;
+    color: #fff;  /* Adjust the text color to fit your theme */
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.pause-button i {
+    margin-right: 5px;
+}button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Adjust the size and spacing of the logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    width: 80px; /* Set logo width */
+    height: auto;
+}

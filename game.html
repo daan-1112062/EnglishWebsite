@@ -6,9 +6,9 @@
     <title>Memory Match Game - Storyhaven</title>
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+
     <!-- Background Canvas for Starlight Effect -->
     <canvas id="starlight-bg"></canvas>
 
@@ -24,7 +24,15 @@
                 console.error('Error loading navbar:', error);
             });
     </script>
-
+    <!-- music.html -->
+<audio id="background-music" loop>
+    <source src="audio/background-music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+<!-- Pause/Play Button -->
+<button id="pause-button" class="pause-button">
+    <i class="fas fa-pause"></i> Pause Music
+</button>
     <!-- Game Introduction -->
     <div class="game-intro">
         <h1>Welcome to the Memory Match Game!</h1>
@@ -114,9 +122,43 @@
                 console.error('Error loading footer:', error);
             });
     </script>
+   <script>
+    // Get the audio element and the pause button
+    const music = document.getElementById("background-music");
+    const pauseButton = document.getElementById("pause-button");
+
+    // Play the audio on page load
+    window.onload = () => {
+        try {
+            music.play();
+        } catch (error) {
+            console.error("Error playing the music:", error);
+        }
+    };
+
+    // Pause/Play functionality
+    pauseButton.addEventListener("click", function() {
+        if (music.paused) {
+            try {
+                music.play();
+                pauseButton.innerHTML = '<i class="fas fa-pause"></i> Pause Music';
+            } catch (error) {
+                console.error("Error playing the music:", error);
+            }
+        } else {
+            try {
+                music.pause();
+                pauseButton.innerHTML = '<i class="fas fa-play"></i> Play Music';
+            } catch (error) {
+                console.error("Error pausing the music:", error);
+            }
+        }
+    });
+</script>
 
     <!-- Game Logic -->
     <script src="Script/game.js"></script>
     <script src="Script/starlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
 </html>

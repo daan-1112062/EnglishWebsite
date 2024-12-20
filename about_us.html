@@ -9,6 +9,7 @@
     <title>About Us</title>
 </head>
 <body>
+
     <!-- Background Canvas for Starlight Effect -->
     <canvas id="starlight-bg"></canvas>
 
@@ -25,7 +26,15 @@
                 console.error('Error loading navbar:', error);
             });
     </script>
-
+    <!-- music.html -->
+<audio id="background-music" loop>
+    <source src="audio/background-music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+<!-- Pause/Play Button -->
+<button id="pause-button" class="pause-button">
+    <i class="fas fa-pause"></i> Pause Music
+</button>
     <!-- About Us Content -->
     <main>
         <section class="about-us-container">
@@ -56,6 +65,49 @@
             });
     </script>
     <script src="Script/starlight.js"></script>
+<script>
+    // Get the audio element and the pause button
+    const music = document.getElementById("background-music");
+    const pauseButton = document.getElementById("pause-button");
 
+    // Log the audio element to check if it exists
+    console.log("Audio element:", music);
+
+    // Play the audio on page load
+    window.onload = () => {
+        console.log("Window loaded. Trying to play the music.");
+        try {
+            music.play();
+            console.log("Music started playing.");
+        } catch (error) {
+            console.error("Error playing the music:", error);
+        }
+    };
+
+    // Log the state of the audio when the pause button is clicked
+    pauseButton.addEventListener("click", function() {
+        console.log("Pause button clicked. Audio paused state:", music.paused);
+
+        if (music.paused) {
+            console.log("Audio is currently paused. Trying to play...");
+            try {
+                music.play();
+                pauseButton.innerHTML = '<i class="fas fa-pause"></i> Pause Music';  // Change button text
+                console.log("Music is now playing.");
+            } catch (error) {
+                console.error("Error playing the music:", error);
+            }
+        } else {
+            console.log("Audio is currently playing. Trying to pause...");
+            try {
+                music.pause();
+                pauseButton.innerHTML = '<i class="fas fa-play"></i> Play Music';  // Change button text
+                console.log("Music is now paused.");
+            } catch (error) {
+                console.error("Error pausing the music:", error);
+            }
+        }
+    });
+</script>
 </body>
 </html>
